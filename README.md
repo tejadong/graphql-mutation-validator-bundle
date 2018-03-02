@@ -3,3 +3,4 @@ This Symfony4 bundle provides integration of [GraphQL](https://facebook.github.i
 
 It uses [Symfony Validator](https://symfony.com/doc/current/validation.html) to check user input.
 
+[Instructions](Resources/doc/index.md)
