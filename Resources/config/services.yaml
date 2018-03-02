@@ -1,0 +1,10 @@
+services:
+  assoconnect_graphql_mutation_validator.input:
+    class: AssoConnect\GraphQLMutationValidatorBundle\Input\Input
+    public: false
+
+  assoconnect_graphql_mutation_validator.formatter:
+    class: AssoConnect\GraphQLMutationValidatorBundle\Formatter\Formatter
+    public: false
+    tags:
+      - { name: kernel.event_listener, event: graphql.error_formatting, method: onErrorFormatting }
