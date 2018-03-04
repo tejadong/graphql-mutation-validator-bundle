@@ -1,6 +1,6 @@
 <?php
 
-namespace AssoConnect\GraphQLMutationValidatorBundle;
+namespace AssoConnect\GraphQLMutationValidatorBundle\DependencyInjection;
 
 use Symfony\Component\Config\FileLocator;
 use Symfony\Component\DependencyInjection\ContainerBuilder;

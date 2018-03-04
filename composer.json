@@ -2,7 +2,7 @@
   "name": "assoconnect/graphql-mutation-validator-bundle",
   "description": "Provide a base class to validate user data sent in a GraphQL mutation and return validations errors.",
   "type": "symfony-bundle",
-  "licence": "MIT",
+  "license": "MIT",
   "keywords": ["GraphQL", "Validation"],
   "authors": [
     {
@@ -23,6 +23,16 @@
   },
   "require": {
     "php": "^7.1",
-    "overblog/graphql-bundle": "0.11-dev"
+    "overblog/graphql-bundle": "dev-master",
+    "symfony/validator": "^4.0",
+    "phpunit/phpunit": "^7.0",
+    "doctrine/annotations": "^1.6"
+  },
+  "require-dev": {
+    "symfony/twig-bundle": "^4.0",
+    "symfony/security-bundle": "^4.0",
+    "symfony/yaml": "^4.0",
+    "symfony/templating": "^4.0",
+    "symfony/console": "^4.0"
   }
 }

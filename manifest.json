@@ -1,5 +1,0 @@
-{
-  "bundles": {
-    "AssoConnect\\GraphQLMutationValidatorBundle\\AssoConnectGraphQLMutationValidatorBundle": ["all"]
-  }
-}
