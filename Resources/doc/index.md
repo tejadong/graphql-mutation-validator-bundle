@@ -65,7 +65,6 @@ Class CustomMutation implements MutationInterface
 	public function __construct(CustomInput $input)
     {
         $this->input = $input;
-        $this->validator = $validator;
     }
 
 	public function customAction(Argument $args)
