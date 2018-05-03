@@ -5,6 +5,6 @@ Mutation:
             createUser:
                 type: User
                 args:
-                    username:
-                        type: String
+                    input:
+                        type: CreateUserInput!
                 resolve: '@=mutation("AssoConnect\\GraphQLMutationValidatorBundle\\Tests\\Functional\\App\\Mutation\\Mutation::createUser", [args])'

@@ -83,7 +83,7 @@ The following query with invalid data will return a response with a `state` key 
 
 ````
 mutation {
-    customAction(username: ""){
+    customAction(input: {username: ""}){
         id
         firstname
         lastname

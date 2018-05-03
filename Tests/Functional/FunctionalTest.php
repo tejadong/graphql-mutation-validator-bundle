@@ -12,7 +12,7 @@ Class FunctionalTest extends TestCase
      */
     public function testCreateUser($username, $expectedData, $expectedErrors)
     {
-        $query = 'mutation Mutation { createUser(username: "' . $username . '"){ username } }';
+        $query = 'mutation Mutation { createUser(input: {username: "' . $username . '"}){ username } }';
 
         $this->assertGraphQL($query, $expectedData, $expectedErrors);
     }

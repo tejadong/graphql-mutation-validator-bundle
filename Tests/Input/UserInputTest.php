@@ -42,15 +42,19 @@ Class UserInputTest extends TestCase
 
         // 1 known key + 1 unknown key
         $args = new Argument(array(
-            'username'  => 'toto',
-            'foo'       => 'bar'
+            'input' => array(
+                'username'  => 'toto',
+                'foo'       => 'bar',
+            )
         ));
         $violations = array();
         $sets[] = array($args, 'toto', $violations);
 
         // 0 known key
         $args = new Argument(array(
-            'foo'       => 'bar'
+            'input' => array(
+                'foo'       => 'bar',
+            )
         ));
         $violations = array(
             $this->createMock(ConstraintViolation::class)

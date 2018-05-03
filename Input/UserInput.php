@@ -21,7 +21,9 @@ Abstract Class UserInput
 
     public function set(Argument $args) :void
     {
-        foreach($args->getRawArguments() as $key => $value)
+        $input = $args->getRawArguments()['input'];
+
+        foreach($input as $key => $value)
         {
             if(property_exists($this, $key))
             {
