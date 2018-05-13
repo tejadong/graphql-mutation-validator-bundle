@@ -13,8 +13,11 @@ Abstract Class UserInput
      * @var ValidatorInterface
      */
     private $validator;
-
-    public function __construct(ValidatorInterface $validator)
+    
+    /**
+     * @required
+     */
+    public function setValidator(ValidatorInterface $validator)
     {
         $this->validator = $validator;
     }
