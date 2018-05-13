@@ -23,7 +23,8 @@ Class UserInputTest extends TestCase
             ->method('validate')
             ->willReturn(new ConstraintViolationList($violations));
 
-        $userInput = new NewUserInput($validator);
+        $userInput = new NewUserInput();
+        $userInput->setValidator($validator);
         $userInput->set($args);
 
         // Check - Setter
