@@ -18,12 +18,19 @@ Class FormatterTest extends TestCase
         $violation = $this->createMock(ConstraintViolationInterface::class);
         $violationPath = 'violation path';
         $violationMessage = 'violation message';
-        $violation->expects($this->once())
+        $violationCode = 'e70f90dd-8d45-404f-81df-804612841e7c';
+        $violation->expects($this->atLeastOnce())
             ->method('getPropertyPath')
             ->willReturn($violationPath);
         $violation->expects($this->once())
             ->method('getMessage')
             ->willReturn($violationMessage);
+        $violation->expects($this->once())
+            ->method('getMessage')
+            ->willReturn($violationMessage);
+        $violation->expects($this->once())
+            ->method('getCode')
+            ->willReturn($violationCode);
 
         $violationList = new ConstraintViolationList(array($violation));
 
@@ -37,10 +44,16 @@ Class FormatterTest extends TestCase
         $formatter->onErrorFormatting($event);
         // Check formatting
         $formattedError = $event->getFormattedError();
+        // State
         $this->assertTrue($formattedError->offsetExists('state'));
         $this->assertSame(array(
             $violationPath => array($violationMessage)
         ), $formattedError->offsetGet('state'));
+        // Code
+        $this->assertTrue($formattedError->offsetExists('code'));
+        $this->assertSame(array(
+            $violationPath => array($violationCode)
+        ), $formattedError->offsetGet('code'));
     }
 
     public function testOnErrorFormatting_generic_exception()

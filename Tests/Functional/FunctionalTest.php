@@ -3,6 +3,7 @@
 namespace AssoConnect\GraphQLMutationValidatorBundle\Tests\Functional;
 
 use AssoConnect\GraphQLMutationValidatorBundle\Exception\UserException;
+use Symfony\Component\Validator\Constraints\NotBlank;
 
 Class FunctionalTest extends TestCase
 {
@@ -34,7 +35,10 @@ Class FunctionalTest extends TestCase
                     'locations' => [['line' => 1, 'column' => 21]],
                     'path' => ['createUser'],
                     'state' => [
-                        'username' => ['This value should not be blank.']
+                        'username' => [(new NotBlank())->message]
+                    ],
+                    'code' => [
+                        'username' => [NotBlank::IS_BLANK_ERROR]
                     ]
                 ]]
             )

@@ -101,6 +101,9 @@ GraphQL response:
             "path": ["customAction"],
             "state": [
                 "username": ["This value should not be blank."]
+            ],
+            "code": [
+                "username": ["e70f90dd-8d45-404f-81df-804612841e7c"]
             ]
         }
     ]
