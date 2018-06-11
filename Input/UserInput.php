@@ -12,7 +12,7 @@ Abstract Class UserInput
     /**
      * @var ValidatorInterface
      */
-    private $validator;
+    protected $validator;
     
     /**
      * @required
