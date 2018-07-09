@@ -23,7 +23,7 @@
 ````
 
 ## Usage
-First extends the abstract `AssoConnect\GraphQLMutationValidatorBundle\UserInput` class to implement your own business logic with some constraints.
+First extends the abstract `AssoConnect\GraphQLMutationValidatorBundle\RequestObject` class to implement your own business logic with some constraints.
 
 We use request objects instead of entities as suggested by [Martin Hujer](https://blog.martinhujer.cz/symfony-forms-with-request-objects/).
 ````
@@ -31,10 +31,10 @@ We use request objects instead of entities as suggested by [Martin Hujer](https:
 # /src/GraphQL/Input/CustomInput.php
 namespace GraphQL\Input;
 
-use AssoConnect\GraphQLMutationValidatorBundle\UserInput;
+use AssoConnect\GraphQLMutationValidatorBundle\RequestObject;
 use Symfony\Component\Validator\Constraints as Assert;
 
-Class CustomInput extends UserInput
+Class CustomInput extends RequestObject
 {
 	/**
 	 * @Assert\NotBlank()

@@ -6,7 +6,7 @@ use AssoConnect\GraphQLMutationValidatorBundle\Exception\UserException;
 use Overblog\GraphQLBundle\Definition\Argument;
 use Symfony\Component\Validator\Validator\ValidatorInterface;
 
-Abstract Class UserInput
+Abstract Class RequestObject
 {
 
     /**

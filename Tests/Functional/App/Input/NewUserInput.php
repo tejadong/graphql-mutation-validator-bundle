@@ -2,10 +2,10 @@
 
 namespace AssoConnect\GraphQLMutationValidatorBundle\Tests\Functional\App\Input;
 
-use AssoConnect\GraphQLMutationValidatorBundle\Input\UserInput;
+use AssoConnect\GraphQLMutationValidatorBundle\Input\RequestObject;
 use Symfony\Component\Validator\Constraints as Assert;
 
-Class NewUserInput extends UserInput
+Class NewUserInput extends RequestObject
 {
 
     /**
