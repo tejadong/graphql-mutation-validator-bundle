@@ -4,3 +4,5 @@ CreateUserInput:
         fields:
             username:
                 type: String
+            firstname:
+                type: String

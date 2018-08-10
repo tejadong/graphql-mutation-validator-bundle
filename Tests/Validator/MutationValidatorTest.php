@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Tests\Validator;
+namespace AssoConnect\GraphQLMutationValidatorBundle\Tests\Validator;
 
 use AssoConnect\GraphQLMutationValidatorBundle\Exception\UserException;
 use AssoConnect\GraphQLMutationValidatorBundle\Tests\Functional\App\Input\NewUserInput;

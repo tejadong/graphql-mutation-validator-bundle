@@ -112,3 +112,34 @@ GraphQL response:
 ````
 
 You may use the code or the state as a translation key.
+
+## Working with entities
+Now let's say you have a `App\Entity\User` where you already have set up some validations. According to the previous example, you have to duplicate these validations.
+
+This bundle contains a custom Symfony constraint and validator to use with request object.
+
+Update your `CustomInput` with this code:
+````
+<?php
+# /src/GraphQL/Input/CustomInput.php
+namespace GraphQL\Input;
+
+use App\Entity\User;
+use AssoConnect\GraphQLMutationValidatorBundle\RequestObject;
+use AssoConnect\GraphQLMutationValidatorBundle\Validator\Constraints as AssoConnectAssert;
+
+use Symfony\Component\Validator\Constraints as Assert;
+
+/**
+ * @AssoConnectAssert\GraphQLRequestObject()
+ */
+Class CustomInput extends RequestObject
+{
+	/**
+	 * @see User::$username
+	 */
+	public $username;
+}
+````
+
+The request object will be validated all the same without any duplicate code! You may also mix `@see` statements with regular constraints in your request object. 

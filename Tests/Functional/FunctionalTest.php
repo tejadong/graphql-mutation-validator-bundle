@@ -11,9 +11,9 @@ Class FunctionalTest extends TestCase
     /**
      * @dataProvider providerCreateUser
      */
-    public function testCreateUser($username, $expectedData, $expectedErrors)
+    public function testCreateUser(string $username, string $firstname, $expectedData, $expectedErrors)
     {
-        $query = 'mutation Mutation { createUser(input: {username: "' . $username . '"}){ username } }';
+        $query = 'mutation Mutation { createUser(input: {username: "' . $username . '", firstname: "' . $firstname . '"}){ username, firstname } }';
 
         $this->assertGraphQL($query, $expectedData, $expectedErrors);
     }
@@ -22,11 +22,16 @@ Class FunctionalTest extends TestCase
     {
         return array(
             array(
-                'toto',
-                ['createUser' => ['username' => 'toto']],
+                'john.doe',
+                'john',
+                ['createUser' => [
+                    'username' => 'john.doe',
+                    'firstname' => 'john',
+                ]],
                 null
             ),
             array(
+                '',
                 '',
                 ['createUser' => null],
                 [[
@@ -35,10 +40,12 @@ Class FunctionalTest extends TestCase
                     'locations' => [['line' => 1, 'column' => 21]],
                     'path' => ['createUser'],
                     'state' => [
-                        'username' => [(new NotBlank())->message]
+                        'username' => [(new NotBlank())->message],
+                        'firstname' => [(new NotBlank())->message],
                     ],
                     'code' => [
-                        'username' => [NotBlank::IS_BLANK_ERROR]
+                        'username' => [NotBlank::IS_BLANK_ERROR],
+                        'firstname' => [NotBlank::IS_BLANK_ERROR],
                     ]
                 ]]
             )
