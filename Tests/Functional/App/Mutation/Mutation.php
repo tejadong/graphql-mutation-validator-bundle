@@ -3,29 +3,30 @@
 namespace AssoConnect\GraphQLMutationValidatorBundle\Tests\Functional\App\Mutation;
 
 use AssoConnect\GraphQLMutationValidatorBundle\Tests\Functional\App\Input\NewUserInput;
+use AssoConnect\GraphQLMutationValidatorBundle\Validator\MutationValidator;
 use Overblog\GraphQLBundle\Definition\Argument;
 use Overblog\GraphQLBundle\Definition\Resolver\MutationInterface;
 
 Class Mutation implements MutationInterface
 {
     /**
-     * @var NewUserInput
+     * @var MutationValidator
      */
-    protected $userInput;
+    protected $validator;
 
-    public function __construct(NewUserInput $userInput)
+    public function __construct(MutationValidator $validator)
     {
-        $this->userInput = $userInput;
+        $this->validator = $validator;
     }
 
     public function createUser(Argument $args)
     {
-        $this->userInput->set($args);
+        $input = new NewUserInput($args);
 
         // Validation
-        $this->userInput->validate();
+        $this->validator->validate($input);
 
         // Response
-        return $this->userInput;
+        return $input;
     }
 }

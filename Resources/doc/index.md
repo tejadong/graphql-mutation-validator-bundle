@@ -52,27 +52,28 @@ Then use `CustomInput` in your mutation:
 namespace App\GraphQL\Mutation;
 
 use App\GraphQL\Input\CustomInput;
+use AssoConnect\GraphQLMutationValidatorBundle\Validator\MutationValidator
 use Overblog\GraphQLBundle\Definition\Argument;
 use Overblog\GraphQLBundle\Definition\Resolver\MutationInterface;
 
 Class CustomMutation implements MutationInterface
 {
     /**
-     * @var CustomInput
+     * @var MutationValidator
      */
-    private $customData;
+    private $validator;
     
-	public function __construct(CustomInput $input)
+	public function __construct(MutationValidator $validator)
     {
-        $this->input = $input;
+        $this->validator = $validator;
     }
 
 	public function customAction(Argument $args)
 	{
 	    // Hydrate the CustomInput insteance with user provided data
-		$this->input->set($args);
+		$input = new CustomInput($args);
 		// Will throw an exception if user data are not valid
-		$this->input->validate();
+		$this->validator->validate($input);
 		// Your business logic here
 		// ...
 	}
@@ -109,3 +110,5 @@ GraphQL response:
     ]
 }
 ````
+
+You may use the code or the state as a translation key.
