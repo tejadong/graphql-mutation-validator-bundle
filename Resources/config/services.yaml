@@ -1,11 +1,10 @@
 services:
 
-
   assoconnect_graphql_mutation_validator.validator:
     class: AssoConnect\GraphQLMutationValidatorBundle\Validator\MutationValidator
     public: true
     arguments:
-        - "@validator"
+      - "@validator"
 
   AssoConnect\GraphQLMutationValidatorBundle\Validator\MutationValidator:
     alias: assoconnect_graphql_mutation_validator.validator

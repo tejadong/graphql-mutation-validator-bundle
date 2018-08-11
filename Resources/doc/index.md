@@ -127,7 +127,6 @@ namespace GraphQL\Input;
 use App\Entity\User;
 use AssoConnect\GraphQLMutationValidatorBundle\RequestObject;
 use AssoConnect\GraphQLMutationValidatorBundle\Validator\Constraints as AssoConnectAssert;
-
 use Symfony\Component\Validator\Constraints as Assert;
 
 /**
