@@ -17,7 +17,7 @@ Class GraphQLRequestObjectValidator extends ConstraintValidator
     {
         // Check instance type
         if($constraint instanceof GraphQLRequestObject === false) {
-            throw new UnexpectedTypeException($constraint, __NAMESPACE__.'\LikeEntityField');
+            throw new UnexpectedTypeException($constraint, __NAMESPACE__.'\GraphQLRequestObject');
         }
 
         if($requestObject instanceof RequestObject === false) {
