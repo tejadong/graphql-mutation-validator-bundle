@@ -33,7 +33,7 @@ Class GraphQLRequestObjectValidator extends ConstraintValidator
             $reflectionProperty = new \ReflectionProperty($requestObject, $field);
             if(preg_match('#@see ([a-zA-Z0-9]+)::\$([a-zA-Z0-9]+)#', $reflectionProperty->getDocComment(), $matches)){
 
-                $reflectionClass = new \ReflectionClass($requestObject);
+                $reflectionClass = new \ReflectionClass($reflectionProperty->getDeclaringClass()->getName());
 
                 $parser = new PhpParser();
                 $statements = $parser->parseClass($reflectionClass);
