@@ -47,14 +47,16 @@ Class GraphQLRequestObjectValidator extends ConstraintValidator
                     $class = $reflectionClass->getNamespaceName() . '\\' . $matches[1];
                 }
 
-                $constraints = $this->getConstraints($class, $field);
+                $property = $matches[2];
+
+                $constraints = $this->getConstraints($class, $property);
 
                 $validatorContext->atPath($field)->validate($value, $constraints);
             }
         }
     }
 
-    protected function getConstraints(string $class, string $field) :array
+    protected function getConstraints(string $class, string $property) :array
     {
         /** @var RecursiveValidator $validator */
         $validator = $this->context->getValidator();
@@ -62,8 +64,8 @@ Class GraphQLRequestObjectValidator extends ConstraintValidator
         // Regular Symfony validation
         /** @var ClassMetadata $metadata */
         $metadata = $validator->getMetadataFor($class);
-        if(array_key_exists($field, $metadata->members)){
-            return $metadata->members[$field][0]->constraints;
+        if(array_key_exists($property, $metadata->members)){
+            return $metadata->members[$property][0]->constraints;
         }
 
         return [];
