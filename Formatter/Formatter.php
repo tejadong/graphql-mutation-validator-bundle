@@ -8,7 +8,7 @@ use Overblog\GraphQLBundle\Event\ErrorFormattingEvent;
 Class Formatter
 {
 
-    public function onErrorFormatting(ErrorFormattingEvent $event) :void
+    public function onErrorFormatting(ErrorFormattingEvent $event)
     {
         // We need getPrevious as GraphQL wraps the thrown exception in a GraphQL\Error\Error
         $error = $event->getError()->getPrevious();

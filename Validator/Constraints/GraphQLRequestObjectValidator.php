@@ -56,7 +56,7 @@ Class GraphQLRequestObjectValidator extends ConstraintValidator
         }
     }
 
-    protected function getConstraints(string $class, string $property) :array
+    protected function getConstraints(string $class, string $property)
     {
         /** @var RecursiveValidator $validator */
         $validator = $this->context->getValidator();
