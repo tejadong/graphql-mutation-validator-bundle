@@ -1,5 +1,5 @@
 {
-  "name": "assoconnect/graphql-mutation-validator-bundle",
+  "name": "tejadong/graphql-mutation-validator-bundle",
   "description": "Provide a base class to validate user data sent in a GraphQL mutation and return validations errors. (Symfony 3)",
   "type": "symfony-bundle",
   "license": "MIT",
