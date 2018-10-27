@@ -1,7 +1,7 @@
 # TejadongGraphQLMutationValidatorBundle
 
-[![Build status](https://gitlab.com/Tejadong/graphql-mutation-validator-bundle/badges/master/build.svg)](https://gitlab.com/Tejadong/graphql-mutation-validator-bundle/commits/master)
-[![Overall test coverage](https://gitlab.com/Tejadong/graphql-mutation-validator-bundle/badges/master/coverage.svg)](https://gitlab.com/Tejadong/graphql-mutation-validator-bundle/pipelines)
+[![Build status](https://gitlab.com/assoconnect/graphql-mutation-validator-bundle/badges/master/build.svg)](https://gitlab.com/Tejadong/graphql-mutation-validator-bundle/commits/master)
+[![Overall test coverage](https://gitlab.com/assoconnect/graphql-mutation-validator-bundle/badges/master/coverage.svg)](https://gitlab.com/Tejadong/graphql-mutation-validator-bundle/pipelines)
 
 THIS BUNDLE IS A FORK OF: [AssoConnect/graphql-mutation-validator-bundle](https://gitlab.com/assoconnect/graphql-mutation-validator-bundle)
 
