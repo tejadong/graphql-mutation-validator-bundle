@@ -1,10 +1,10 @@
 <?php
 
-namespace AssoConnect\GraphQLMutationValidatorBundle\Tests\Validator\Constraints;
+namespace Tejadong\GraphQLMutationValidatorBundle\Tests\Validator\Constraints;
 
-use AssoConnect\GraphQLMutationValidatorBundle\Tests\Functional\App\Input\NewUserInput;
-use AssoConnect\GraphQLMutationValidatorBundle\Tests\Functional\TestCase;
-use AssoConnect\GraphQLMutationValidatorBundle\Validator\Constraints\GraphQLRequestObjectValidator;
+use Tejadong\GraphQLMutationValidatorBundle\Tests\Functional\App\Input\NewUserInput;
+use Tejadong\GraphQLMutationValidatorBundle\Tests\Functional\TestCase;
+use Tejadong\GraphQLMutationValidatorBundle\Validator\Constraints\GraphQLRequestObjectValidator;
 use Symfony\Component\Validator\Constraints\NotBlank;
 use Symfony\Component\Validator\ConstraintViolation;
 

@@ -1,15 +1,15 @@
 <?php
 
-namespace AssoConnect\GraphQLMutationValidatorBundle\Tests\Functional\App\Input;
+namespace Tejadong\GraphQLMutationValidatorBundle\Tests\Functional\App\Input;
 
-use AssoConnect\GraphQLMutationValidatorBundle\Input\RequestObject;
-use AssoConnect\GraphQLMutationValidatorBundle\Tests\Functional\App\Entity\User;
-use AssoConnect\GraphQLMutationValidatorBundle\Validator\Constraints as AssoConnectAssert;
+use Tejadong\GraphQLMutationValidatorBundle\Input\RequestObject;
+use Tejadong\GraphQLMutationValidatorBundle\Tests\Functional\App\Entity\User;
+use Tejadong\GraphQLMutationValidatorBundle\Validator\Constraints as TejadongAssert;
 use Symfony\Component\Validator\Constraints as Assert;
 
 
 /**
- * @AssoConnectAssert\GraphQLRequestObject()
+ * @TejadongAssert\GraphQLRequestObject()
  */
 Class NewUserInput extends RequestObject
 {

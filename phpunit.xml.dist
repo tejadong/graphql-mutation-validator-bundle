@@ -14,7 +14,7 @@
         <env name="APP_DEBUG" value="1" />
     </php>
     <testsuites>
-        <testsuite name="AssoConnectGraphQLMutationValidatorBundle Test Suite">
+        <testsuite name="TejadongGraphQLMutationValidatorBundle Test Suite">
             <directory>./Tests</directory>
         </testsuite>
     </testsuites>

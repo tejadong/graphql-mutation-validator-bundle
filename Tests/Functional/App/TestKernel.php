@@ -1,8 +1,8 @@
 <?php
 
-namespace AssoConnect\GraphQLMutationValidatorBundle\Tests\Functional\App;
+namespace Tejadong\GraphQLMutationValidatorBundle\Tests\Functional\App;
 
-use AssoConnect\GraphQLMutationValidatorBundle\AssoConnectGraphQLMutationValidatorBundle;
+use Tejadong\GraphQLMutationValidatorBundle\TejadongGraphQLMutationValidatorBundle;
 use Overblog\GraphQLBundle\OverblogGraphQLBundle;
 use Symfony\Bundle\FrameworkBundle\FrameworkBundle;
 use Symfony\Bundle\TwigBundle\TwigBundle;
@@ -20,7 +20,7 @@ Class TestKernel extends Kernel
             new FrameworkBundle(),
             new TwigBundle(),
             new OverblogGraphQLBundle(),
-            new AssoConnectGraphQLMutationValidatorBundle()
+            new TejadongGraphQLMutationValidatorBundle()
         ];
     }
 
@@ -59,6 +59,6 @@ Class TestKernel extends Kernel
 
     private function basePath()
     {
-        return sys_get_temp_dir().'/AssoConnectGraphQLMutationValidatorBundle/'.Kernel::VERSION.'/';
+        return sys_get_temp_dir().'/TejadongGraphQLMutationValidatorBundle/'.Kernel::VERSION.'/';
     }
 }

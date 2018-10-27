@@ -1,9 +1,9 @@
 <?php
 
-namespace AssoConnect\GraphQLMutationValidatorBundle\Tests\Formatter;
+namespace Tejadong\GraphQLMutationValidatorBundle\Tests\Formatter;
 
-use AssoConnect\GraphQLMutationValidatorBundle\Exception\UserException;
-use AssoConnect\GraphQLMutationValidatorBundle\Formatter\Formatter;
+use Tejadong\GraphQLMutationValidatorBundle\Exception\UserException;
+use Tejadong\GraphQLMutationValidatorBundle\Formatter\Formatter;
 use GraphQL\Error\Error;
 use PHPUnit\Framework\TestCase;
 use Overblog\GraphQLBundle\Event\ErrorFormattingEvent;

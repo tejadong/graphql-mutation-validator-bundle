@@ -1,6 +1,6 @@
 <?php
 
-namespace AssoConnect\GraphQLMutationValidatorBundle\Exception;
+namespace Tejadong\GraphQLMutationValidatorBundle\Exception;
 
 use Symfony\Component\Validator\ConstraintViolationListInterface;
 use GraphQL\Error\ClientAware;

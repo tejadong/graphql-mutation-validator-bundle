@@ -1,10 +1,10 @@
 <?php
 
-namespace AssoConnect\GraphQLMutationValidatorBundle\Tests\Validator;
+namespace Tejadong\GraphQLMutationValidatorBundle\Tests\Validator;
 
-use AssoConnect\GraphQLMutationValidatorBundle\Exception\UserException;
-use AssoConnect\GraphQLMutationValidatorBundle\Tests\Functional\App\Input\NewUserInput;
-use AssoConnect\GraphQLMutationValidatorBundle\Validator\MutationValidator;
+use Tejadong\GraphQLMutationValidatorBundle\Exception\UserException;
+use Tejadong\GraphQLMutationValidatorBundle\Tests\Functional\App\Input\NewUserInput;
+use Tejadong\GraphQLMutationValidatorBundle\Validator\MutationValidator;
 use Overblog\GraphQLBundle\Definition\Argument;
 use PHPUnit\Framework\TestCase;
 use Symfony\Component\Validator\ConstraintViolation;

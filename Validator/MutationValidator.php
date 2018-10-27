@@ -1,9 +1,9 @@
 <?php
 
-namespace AssoConnect\GraphQLMutationValidatorBundle\Validator;
+namespace Tejadong\GraphQLMutationValidatorBundle\Validator;
 
-use AssoConnect\GraphQLMutationValidatorBundle\Exception\UserException;
-use AssoConnect\GraphQLMutationValidatorBundle\Input\RequestObject;
+use Tejadong\GraphQLMutationValidatorBundle\Exception\UserException;
+use Tejadong\GraphQLMutationValidatorBundle\Input\RequestObject;
 use Symfony\Component\Validator\Validator\ValidatorInterface;
 
 Class MutationValidator

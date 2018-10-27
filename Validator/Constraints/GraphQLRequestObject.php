@@ -1,6 +1,6 @@
 <?php
 
-namespace AssoConnect\GraphQLMutationValidatorBundle\Validator\Constraints;
+namespace Tejadong\GraphQLMutationValidatorBundle\Validator\Constraints;
 
 use Symfony\Component\Validator\Constraint;
 

@@ -33,7 +33,7 @@ overblog_graphql:
         query_max_complexity: false
 
 services:
-    AssoConnect\GraphQLMutationValidatorBundle\Tests\Functional\App\:
+    Tejadong\GraphQLMutationValidatorBundle\Tests\Functional\App\:
         autowire: true
         autoconfigure: true
         public: false

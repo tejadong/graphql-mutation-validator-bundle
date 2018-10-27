@@ -7,4 +7,4 @@ Mutation:
                 args:
                     input:
                         type: CreateUserInput!
-                resolve: '@=mutation("AssoConnect\\GraphQLMutationValidatorBundle\\Tests\\Functional\\App\\Mutation\\Mutation::createUser", [args])'
+                resolve: '@=mutation("Tejadong\\GraphQLMutationValidatorBundle\\Tests\\Functional\\App\\Mutation\\Mutation::createUser", [args])'

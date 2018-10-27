@@ -1,6 +1,6 @@
 <?php
 
-namespace AssoConnect\GraphQLMutationValidatorBundle\Input;
+namespace Tejadong\GraphQLMutationValidatorBundle\Input;
 
 use Overblog\GraphQLBundle\Definition\Argument;
 

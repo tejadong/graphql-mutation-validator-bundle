@@ -1,16 +1,16 @@
 services:
 
-  assoconnect_graphql_mutation_validator.validator:
-    class: AssoConnect\GraphQLMutationValidatorBundle\Validator\MutationValidator
+  Tejadong_graphql_mutation_validator.validator:
+    class: Tejadong\GraphQLMutationValidatorBundle\Validator\MutationValidator
     public: true
     arguments:
       - "@validator"
 
-  AssoConnect\GraphQLMutationValidatorBundle\Validator\MutationValidator:
-    alias: assoconnect_graphql_mutation_validator.validator
+  Tejadong\GraphQLMutationValidatorBundle\Validator\MutationValidator:
+    alias: Tejadong_graphql_mutation_validator.validator
 
-  assoconnect_graphql_mutation_validator.formatter:
-    class: AssoConnect\GraphQLMutationValidatorBundle\Formatter\Formatter
+  Tejadong_graphql_mutation_validator.formatter:
+    class: Tejadong\GraphQLMutationValidatorBundle\Formatter\Formatter
     public: false
     tags:
       - { name: kernel.event_listener, event: graphql.error_formatting, method: onErrorFormatting }

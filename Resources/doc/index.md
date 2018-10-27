@@ -1,4 +1,4 @@
-# AssoConnectGraphQLMutationValidatorBundle
+# TejadongGraphQLMutationValidatorBundle
 
 ## Requirements
 
@@ -8,11 +8,11 @@
 
 **a)** First download the bundle
 
-`composer require assoconnect/graphql-mutation-validator-bundle`
+`composer require Tejadong/graphql-mutation-validator-bundle`
 
 **b)** Accept the contrib recipes installation from Symfony Flex
 ````
--  WARNING  assoconnect/graphql-mutation-validator-bundle (0.1): From gitlab.com/assoconnect/graphql-mutation-validator-bundle
+-  WARNING  Tejadong/graphql-mutation-validator-bundle (0.1): From gitlab.com/Tejadong/graphql-mutation-validator-bundle
     The recipe for this package comes from the "contrib" repository, which is open to community contributions.
     Do you want to execute this recipe?
     [y] Yes
@@ -23,7 +23,7 @@
 ````
 
 ## Usage
-First extends the abstract `AssoConnect\GraphQLMutationValidatorBundle\RequestObject` class to implement your own business logic with some constraints.
+First extends the abstract `Tejadong\GraphQLMutationValidatorBundle\RequestObject` class to implement your own business logic with some constraints.
 
 We use request objects instead of entities as suggested by [Martin Hujer](https://blog.martinhujer.cz/symfony-forms-with-request-objects/).
 ````
@@ -31,7 +31,7 @@ We use request objects instead of entities as suggested by [Martin Hujer](https:
 # /src/GraphQL/Input/CustomInput.php
 namespace GraphQL\Input;
 
-use AssoConnect\GraphQLMutationValidatorBundle\RequestObject;
+use Tejadong\GraphQLMutationValidatorBundle\RequestObject;
 use Symfony\Component\Validator\Constraints as Assert;
 
 Class CustomInput extends RequestObject
@@ -52,7 +52,7 @@ Then use `CustomInput` in your mutation:
 namespace App\GraphQL\Mutation;
 
 use App\GraphQL\Input\CustomInput;
-use AssoConnect\GraphQLMutationValidatorBundle\Validator\MutationValidator
+use Tejadong\GraphQLMutationValidatorBundle\Validator\MutationValidator
 use Overblog\GraphQLBundle\Definition\Argument;
 use Overblog\GraphQLBundle\Definition\Resolver\MutationInterface;
 
@@ -125,12 +125,12 @@ Update your `CustomInput` with this code:
 namespace GraphQL\Input;
 
 use App\Entity\User;
-use AssoConnect\GraphQLMutationValidatorBundle\RequestObject;
-use AssoConnect\GraphQLMutationValidatorBundle\Validator\Constraints as AssoConnectAssert;
+use Tejadong\GraphQLMutationValidatorBundle\RequestObject;
+use Tejadong\GraphQLMutationValidatorBundle\Validator\Constraints as TejadongAssert;
 use Symfony\Component\Validator\Constraints as Assert;
 
 /**
- * @AssoConnectAssert\GraphQLRequestObject()
+ * @TejadongAssert\GraphQLRequestObject()
  */
 Class CustomInput extends RequestObject
 {

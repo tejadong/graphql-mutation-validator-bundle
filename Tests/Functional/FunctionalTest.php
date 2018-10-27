@@ -1,8 +1,8 @@
 <?php
 
-namespace AssoConnect\GraphQLMutationValidatorBundle\Tests\Functional;
+namespace Tejadong\GraphQLMutationValidatorBundle\Tests\Functional;
 
-use AssoConnect\GraphQLMutationValidatorBundle\Exception\UserException;
+use Tejadong\GraphQLMutationValidatorBundle\Exception\UserException;
 use Symfony\Component\Validator\Constraints\NotBlank;
 
 Class FunctionalTest extends TestCase

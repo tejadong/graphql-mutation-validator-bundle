@@ -1,8 +1,8 @@
 <?php
 
-namespace AssoConnect\GraphQLMutationValidatorBundle\Tests\Input;
+namespace Tejadong\GraphQLMutationValidatorBundle\Tests\Input;
 
-use AssoConnect\GraphQLMutationValidatorBundle\Tests\Functional\App\Input\NewUserInput;
+use Tejadong\GraphQLMutationValidatorBundle\Tests\Functional\App\Input\NewUserInput;
 use Overblog\GraphQLBundle\Definition\Argument;
 use PHPUnit\Framework\TestCase;
 

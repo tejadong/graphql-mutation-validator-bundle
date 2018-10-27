@@ -1,9 +1,9 @@
 <?php
 
-namespace AssoConnect\GraphQLMutationValidatorBundle\Tests\Functional\App\Mutation;
+namespace Tejadong\GraphQLMutationValidatorBundle\Tests\Functional\App\Mutation;
 
-use AssoConnect\GraphQLMutationValidatorBundle\Tests\Functional\App\Input\NewUserInput;
-use AssoConnect\GraphQLMutationValidatorBundle\Validator\MutationValidator;
+use Tejadong\GraphQLMutationValidatorBundle\Tests\Functional\App\Input\NewUserInput;
+use Tejadong\GraphQLMutationValidatorBundle\Validator\MutationValidator;
 use Overblog\GraphQLBundle\Definition\Argument;
 use Overblog\GraphQLBundle\Definition\Resolver\MutationInterface;
 

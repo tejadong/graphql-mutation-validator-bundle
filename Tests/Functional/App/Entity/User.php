@@ -1,6 +1,6 @@
 <?php
 
-namespace AssoConnect\GraphQLMutationValidatorBundle\Tests\Functional\App\Entity;
+namespace Tejadong\GraphQLMutationValidatorBundle\Tests\Functional\App\Entity;
 
 use Symfony\Component\Validator\Constraints as Assert;
 

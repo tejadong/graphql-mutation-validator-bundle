@@ -6,8 +6,8 @@
   "keywords": ["GraphQL", "Validation"],
   "authors": [
     {
-      "name": "AssoConnect",
-      "homepage": "https://www.assoconnect.com"
+      "name": "Tejadong",
+      "homepage": "https://www.Tejadong.com"
     },
     {
       "name": "Sylvain Fabre (author owner)"
@@ -18,7 +18,7 @@
   ],
   "autoload": {
     "psr-4": {
-      "AssoConnect\\GraphQLMutationValidatorBundle\\": ""
+      "Tejadong\\GraphQLMutationValidatorBundle\\": ""
     },
     "exclude-from-classmap": [
       "/Tests/"
